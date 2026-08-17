@@ -1,0 +1,61 @@
+@layer reset, tokens, elements, components;
+
+@layer reset {
+  *{
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@layer tokens {
+  :root {
+    color-scheme: dark;
+
+    --night: oklch(21.9% 0.054 276.3deg);
+    --night-2: oklch(26.7% 0.072 276deg);
+    --night-3: oklch(31.7% 0.088 275deg);
+    --night-base: oklch(19% 0.046 277.3deg);
+    --parchment: oklch(92.8% 0.021 79.1deg);
+    --parchment-dim: oklch(81.8% 0.022 88.7deg);
+    --gold: oklch(75.6% 0.123 84.5deg);
+    --gold-bright: oklch(85.1% 0.123 85.8deg);
+    --gold-dim: oklch(51.4% 0.075 86.3deg);
+    --ember: oklch(60.7% 0.123 37.3deg);
+    --line: oklch(75.6% 0.123 84.5deg / 22%);
+    --radius: 14px;
+
+    --step-h1: clamp(2.125rem, 1.6033rem + 2.6087cqi, 3.375rem);
+  }
+}
+
+@layer elements {
+  body {
+    background:
+      radial-gradient(ellipse 900px 500px at 50% -10%, var(--night-3), transparent),
+      linear-gradient(180deg, var(--night) 0%, var(--night-base) 100%);
+    color: var(--parchment);
+    font-family: 'Inter', sans-serif;
+    min-block-size: 100vh;
+    padding-block: 0 60px;
+  }
+
+  .wrap {
+    max-inline-size: 920px;
+    margin-inline: auto;
+    padding-inline: 20px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}

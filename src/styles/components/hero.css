@@ -1,0 +1,129 @@
+@layer components {
+  .hero {
+    padding-block: 44px 28px;
+    text-align: center;
+    position: relative;
+  }
+
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: var(--gold-dim);
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: var(--step-h1);
+    margin-block: 6px 4px;
+    color: var(--parchment);
+    letter-spacing: 0.01em;
+  }
+
+  .hero p.sub {
+    color: var(--parchment-dim);
+    font-size: 15px;
+    max-inline-size: 480px;
+    margin-inline: auto;
+    margin-block-end: 30px;
+    line-height: 1.5;
+  }
+
+  .rose-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-inline: auto;
+    margin-block-end: 8px;
+    inline-size: min(280px, 72vi);
+    block-size: min(280px, 72vi);
+
+    svg {
+      inline-size: 100%;
+      block-size: 100%;
+      overflow: visible;
+    }
+  }
+
+  .ring-bg {
+    fill: none;
+    stroke: oklch(92.8% 0.021 79.1deg / 8%);
+    stroke-width: 10;
+  }
+
+  .ring-fg {
+    fill: none;
+    stroke: url(#goldGrad);
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 150px 150px;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: stroke-dashoffset 900ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+  }
+
+  .rose-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rose-pct {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 1;
+    color: var(--gold-bright);
+  }
+
+  .rose-frac {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--parchment-dim);
+    margin-block-start: 6px;
+  }
+
+  .rose-level {
+    font-size: 12px;
+    color: var(--parchment);
+    margin-block-start: 10px;
+    padding: 4px 12px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: oklch(75.6% 0.123 84.5deg / 6%);
+  }
+
+  .stat-row {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-block-start: 26px;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    text-align: center;
+
+    b {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      color: var(--gold-bright);
+    }
+
+    span {
+      font-size: 11px;
+      color: var(--parchment-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+  }
+}

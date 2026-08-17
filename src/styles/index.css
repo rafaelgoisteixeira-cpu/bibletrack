@@ -1,0 +1,7 @@
+@import './global.css';
+@import './components/loading.css';
+@import './components/hero.css';
+@import './components/controls.css';
+@import './components/books.css';
+@import './components/achievements.css';
+@import './components/footer.css';

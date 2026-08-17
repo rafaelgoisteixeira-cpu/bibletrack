@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProgressRing from '../components/ProgressRing.astro';
+import BookList from '../components/BookList.astro';
+import Achievements from '../components/Achievements.astro';
+---
+
+<BaseLayout title="Jornada pelas Escrituras">
+  <ProgressRing />
+  <BookList />
+  <Achievements />
+
+  <footer>
+    <span class="save-note">Seu progresso é salvo automaticamente.</span>
+    <button class="reset-btn" id="resetBtn">Reiniciar progresso</button>
+  </footer>
+</BaseLayout>
+
+<script>
+  import '../scripts/tracker.js';
+</script>

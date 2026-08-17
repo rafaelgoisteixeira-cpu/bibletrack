@@ -1,0 +1,49 @@
+@layer components {
+  .ach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 10px;
+    margin-block-start: 14px;
+  }
+
+  .ach {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 14px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: oklch(100% 0 0deg / 2%);
+
+    &.unlocked {
+      border-color: oklch(75.6% 0.123 84.5deg / 50%);
+      background: oklch(75.6% 0.123 84.5deg / 6%);
+
+      .ach-title {
+        color: var(--gold-bright);
+      }
+    }
+  }
+
+  .ach-icon {
+    font-size: 22px;
+    filter: grayscale(1) opacity(40%);
+
+    .ach.unlocked & {
+      filter: none;
+    }
+  }
+
+  .ach-title {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--parchment);
+  }
+
+  .ach-desc {
+    font-size: 12px;
+    color: var(--parchment-dim);
+    margin-block-start: 3px;
+    line-height: 1.4;
+  }
+}

@@ -1,0 +1,35 @@
+@layer components {
+  footer {
+    margin-block-start: 44px;
+    padding-block-start: 18px;
+    border-block-start: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .save-note {
+    font-size: 11px;
+    color: var(--parchment-dim);
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .reset-btn {
+    background: transparent;
+    border: 1px solid var(--ember);
+    color: var(--ember);
+    padding-block: 8px;
+    padding-inline: 16px;
+    border-radius: 999px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+
+    &:hover {
+      background: var(--ember);
+      color: var(--night-base);
+    }
+  }
+}
