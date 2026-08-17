@@ -1,9 +1,15 @@
 {
-  "name": "biblia-track",
+  "name": "bibletrack",
   "compatibility_date": "2026-08-17",
   "compatibility_flags": ["nodejs_compat"],
   "observability": {
     "enabled": true,
     "head_sampling_rate": 1
-  }
+  },
+  "routes": [
+    {
+      "pattern": "officinabenedicta.com.br/bibletrack*",
+      "zone_name": "officinabenedicta.com.br"
+    }
+  ]
 }
