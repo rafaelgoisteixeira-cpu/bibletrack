@@ -8,8 +8,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "wrangler dev",
-    "deploy": "astro build && wrangler deploy",
+    "preview": "wrangler dev --assets ./dist/client",
+    "deploy": "astro build && wrangler deploy --assets ./dist/client",
     "cf-typegen": "wrangler types",
     "astro": "astro"
   },
