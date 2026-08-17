@@ -24,3 +24,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Claude Code skill configs (managed via skills-lock.json, not app source)
+.agents/
+.claude/
